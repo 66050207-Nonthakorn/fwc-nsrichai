@@ -1,0 +1,235 @@
+:root {
+    color-scheme: light;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #1e2521;
+    background: #fff;
+    font:
+        16px/1.6 Arial,
+        sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+}
+.wrap,
+.nav {
+    width: min(1100px, calc(100% - 40px));
+    margin: auto;
+
+}
+.skip-link {
+    position: fixed;
+    top: -60px;
+    left: 20px;
+    z-index: 11;
+    padding: 8px 12px;
+    background: #fff;
+
+}
+.skip-link:focus {
+    top: 70px;
+}
+
+.site-header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 10;
+    height: 64px;
+    background: #fff;
+    border-bottom: 1px solid #dce1dc;
+}
+main {
+    padding-top: 64px;
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.mark {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: clamp(12px, 3vw, 32px);
+    white-space: nowrap;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+}
+.nav-links a[aria-current="location"] {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+}
+a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+section {
+    position: sticky;
+    top: 64px;
+    min-height: calc(100svh - 64px);
+    scroll-margin-top: 64px;
+}
+section + section { box-shadow: 0 -12px 28px #1e252112; }
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+h1 {
+    margin-bottom: 10px;
+    font-size: clamp(3rem, 7vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -0.065em;
+}
+h2 {
+    margin-bottom: 45px;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: -0.055em;
+}
+h3 {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #cbd4cd;
+    font-size: 17px;
+}
+.profile {
+    z-index: 1;
+    background: #fff;
+}
+.profile-inner {
+    min-height: calc(100svh - 64px);
+    padding-block: 100px 90px;
+    display: grid;
+    grid-template-columns: 1fr minmax(200px, 420px);
+    align-items: center;
+    gap: 60px;
+}
+.job-title {
+    margin: 0;
+    color: #53645a;
+    font-size: 22px;
+}
+.about-copy {
+    max-width: 52ch;
+    margin: 18px 0 0;
+    color: #53645a;
+}
+.photo {
+    aspect-ratio: 5 / 4;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
+.experience {
+    z-index: 2;
+    padding-block: 95px 105px;
+    background: #f5f7f4;
+}
+.details {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 80px;
+}
+.entry-title {
+    margin: 24px 0 4px;
+    font-weight: 700;
+}
+.entry-title span,
+.entry-date,
+.placeholder {
+    color: #607168;
+    font-weight: 400;
+}
+.entry-date {
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+.placeholder {
+    margin-bottom: 0;
+}
+.skills {
+    margin: 18px 0 0;
+    padding-left: 19px;
+}
+.skills li {
+    margin-bottom: 8px;
+}
+.contact {
+    z-index: 3;
+    padding-block: 100px 130px;
+    background: #fff;
+}
+.contact-links {
+    max-width: 640px;
+    border-top: 1px solid #cbd4cd;
+}
+.contact-links a {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #cbd4cd;
+    overflow-wrap: anywhere;
+}
+@media (max-width: 700px) {
+    .profile-inner {
+        grid-template-columns: 1fr;
+        align-content: center;
+        padding-block: 70px;
+        gap: 40px;
+    }
+    .photo {
+        width: min(100%, 220px);
+    }
+    .details {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    .experience,
+    .contact {
+        padding-block: 70px;
+    }
+}
+@media (max-width: 400px) {
+    .nav-links a {
+        font-size: 12px;
+    }
+    .nav-links {
+        gap: 10px;
+    }
+}
+/* ponytail: short viewports need normal scrolling; use inner sticky panels if short-screen stacking is required. */
+@media (max-height: 700px) {
+    section {
+        position: relative;
+        top: auto;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        scroll-behavior: auto;
+    }
+}
