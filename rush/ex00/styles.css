@@ -221,7 +221,6 @@ h3 {
         gap: 10px;
     }
 }
-/* ponytail: short viewports need normal scrolling; use inner sticky panels if short-screen stacking is required. */
 @media (max-height: 700px) {
     section {
         position: relative;
