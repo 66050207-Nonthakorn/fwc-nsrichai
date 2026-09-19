@@ -1,0 +1,56 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: #f4f1ea;
+  color: #25221e;
+  font: 16px/1.5 sans-serif;
+}
+
+main {
+  width: min(90%, 34rem);
+  padding: 2rem;
+  border: 1px solid #d7d0c4;
+  border-radius: 0.75rem;
+  background: white;
+  box-shadow: 0 0.75rem 2rem rgb(37 34 30 / 12%);
+}
+
+h1 {
+  margin-top: 0;
+}
+
+button {
+  padding: 0.55rem 1rem;
+  border: 0;
+  border-radius: 0.35rem;
+  background: #25221e;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+}
+
+#ft_list {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+#ft_list > div {
+  padding: 0.8rem 1rem;
+  border: 1px solid #d7d0c4;
+  border-radius: 0.35rem;
+  background: #fffaf1;
+  cursor: pointer;
+}
+
+#ft_list > div:hover,
+#ft_list > div:focus-visible {
+  background: #f1e5d1;
+  outline: none;
+}
+
+#ft_list > div:focus-visible {
+  box-shadow: 0 0 0 3px #d6a75d;
+}
