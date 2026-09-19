@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+    <script src="calc.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Calculator</h1>
+      <form id="calculator">
+        <label>
+          Left number
+          <input id="left" type="text" inputmode="numeric" autocomplete="off">
+        </label>
+        <label>
+          Operator
+          <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+          </select>
+        </label>
+        <label>
+          Right number
+          <input id="right" type="text" inputmode="numeric" autocomplete="off">
+        </label>
+        <input type="submit" value="Try me!">
+      </form>
+    </main>
+  </body>
+</html>
