@@ -1,0 +1,18 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+
+#balloon {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+#balloon:focus-visible {
+  outline: 3px solid black;
+  outline-offset: 4px;
+}
